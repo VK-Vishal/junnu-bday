@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Arial', sans-serif;
   overflow: hidden;
+  color: black;
 }
 
 .page {
@@ -14,6 +15,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 .title-container {
   position: absolute;
   top: 10px;
@@ -26,22 +28,21 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  /* Removed text-shadow */
   margin: 0;
   padding: 10px;
 }
 
-
 /* Welcome Page */
 .welcome-page {
-  background: linear-gradient(135deg, #4facfe, #00f2fe); /* Blue to light cyan */
+  background: #4facfe; /* Solid blue instead of gradient */
   animation: fadeIn 2s ease-in;
 }
 
 .welcome-page .content {
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  /* Removed text-shadow */
 }
 
 .welcome-page h1 {
@@ -51,7 +52,7 @@ body {
 
 /* Wish Page */
 .wish-page {
-  background: linear-gradient(135deg, #1e90ff, #87cefa, #00b7eb); /* Blue gradient with cyan */
+  background: #1e90ff; /* Solid blue instead of gradient */
   color: white;
   text-align: center;
   position: relative;
@@ -59,28 +60,27 @@ body {
 }
 
 .wish-page::before {
+  /* Removed gradient and pulse effect */
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.25) 10%, transparent 70%);
+  background: transparent; /* No gradient */
   transform: translate(-50%, -50%);
-  animation: pulseGlow 6s infinite ease-in-out;
   z-index: 0;
 }
 
 .wish-page::after {
+  /* Removed sparkle effect */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
-  background-size: 25px 25px;
-  animation: twinkle 3s infinite;
+  background: transparent; /* No gradient */
   z-index: 0;
 }
 
@@ -94,7 +94,7 @@ body {
 .pulse-title {
   font-size: 3.5rem;
   margin-bottom: 25px;
-  text-shadow: 0 0 15px rgba(255,255,255,0.9), 0 0 25px rgba(30,144,255,0.7);
+  /* Removed text-shadow */
   animation: pulse 2s infinite;
 }
 
@@ -117,29 +117,28 @@ body {
   font-size: 1.3rem;
   margin: 20px 0;
   padding: 10px;
-  background: rgba(135,206,250,0.2); /* Light sky blue with transparency */
+  background: transparent; /* Removed gradient background */
   border-radius: 10px;
-  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+  /* Removed text-shadow */
   animation: pulseQuote 4s infinite;
 }
 
 /* Photos Page */
 .photos-page {
-  background: linear-gradient(135deg, #4682b4, #191970, #00b7eb); /* Steel blue to midnight blue with cyan */
+  background: #4682b4; /* Solid blue instead of gradient */
   position: relative;
   overflow: hidden;
 }
 
 .photos-page::before {
+  /* Removed sparkle effect */
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px); /* Softer sparkle */
-  background-size: 20px 20px;
-  animation: twinkle 4s infinite;
+  background: transparent; /* No gradient */
   z-index: 0;
 }
 
@@ -158,7 +157,7 @@ body {
   max-height: 90%;
   object-fit: contain;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Reduced shadow */
+  /* Removed shadow */
   border: 2px solid rgba(255,255,255,0.5); /* Keeping border for video */
   position: absolute;
   opacity: 1; /* Visible by default */
@@ -175,8 +174,7 @@ body {
   max-height: 90%; /* Full image visibility */
   object-fit: contain; /* Preserve aspect ratio */
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Reduced shadow */
-  /* Border removed for images */
+  /* Removed shadow */
   animation: rotateSlide 55s infinite; /* 5s per image x 11 images */
   transform-origin: center;
   transition: opacity 0.5s ease;
@@ -185,15 +183,15 @@ body {
 
 .overlay-text {
   position: absolute;
-  bottom: 20px;
-  width: 100%;
+  bottom: 30px; /* Slightly higher for better spacing */
+  width: 90%; /* Slightly narrower for aesthetics */
   z-index: 2;
   color: white;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  /* Removed text-shadow */
   text-align: center;
   font-size: 2.5rem;
-  padding: 10px;
-  background: rgba(25,25,112,0.3); /* Midnight blue with transparency */
+  padding: 15px;
+  background: rgba(25,25,112,0.5); /* Kept background for visibility */
   border-radius: 10px;
 }
 
@@ -232,9 +230,9 @@ body {
 }
 
 @keyframes pulseText {
-  0% { opacity: 0.9; text-shadow: 0 0 5px rgba(255,255,255,0.5); }
-  50% { opacity: 1; text-shadow: 0 0 15px rgba(255,255,255,0.8); }
-  100% { opacity: 0.9; text-shadow: 0 0 5px rgba(255,255,255,0.5); }
+  0% { opacity: 0.9; }
+  50% { opacity: 1; }
+  100% { opacity: 0.9; }
 }
 
 @keyframes pulseQuote {
